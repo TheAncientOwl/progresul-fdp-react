@@ -109,7 +109,7 @@ export default function App() {
                 de producție.
               </Paragraph>
               <Divider />
-              <Graphic src={ComponenteleCapitaluluiGr} alt='componentele capitalului' width='600px' />
+              <Graphic src={ComponenteleCapitaluluiGr} alt='componentele capitalului' />
               <Divider />
             </ContentSection>
           </ContentContainer>
