@@ -26,7 +26,9 @@ export default function Navbar() {
 
             {['Aspecte', 'Dezvoltarea economică'].map((item, index) => (
               <NavMenuItem key={index}>
-                <NavLink onClick={() => setChapterMenuOpen(!chapterMenuOpen)}>{item}</NavLink>
+                <NavLink to='section-title' onClick={() => setChapterMenuOpen(!chapterMenuOpen)}>
+                  {item}
+                </NavLink>
               </NavMenuItem>
             ))}
           </NavMenu>
