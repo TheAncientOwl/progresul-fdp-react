@@ -29,8 +29,8 @@ const theme = {
     },
   },
   text: {
-    primary: '#3D3D3D',
-    secondary: '#959595',
+    primary: '#959595',
+    secondary: '#3D3D3D',
   },
 };
 
@@ -109,7 +109,11 @@ export default function App() {
                 de producție.
               </Paragraph>
               <Divider />
-              <Graphic src={ComponenteleCapitaluluiGr} alt='componentele capitalului' />
+              <Graphic
+                title='Componentele capitalului'
+                src={ComponenteleCapitaluluiGr}
+                alt='componentele capitalului'
+              />
               <Divider />
             </ContentSection>
           </ContentContainer>
