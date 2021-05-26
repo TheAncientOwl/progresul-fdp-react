@@ -13,6 +13,8 @@ import {
   Divider,
 } from './components/content/ContentElements';
 import ContentSection from './components/content';
+import ComponenteleCapitaluluiGr from './images/componentele_capitalului.png';
+import Graphic from './components/graphic';
 
 const theme = {
   primary: '#50E627',
@@ -107,11 +109,11 @@ export default function App() {
                 de producție.
               </Paragraph>
               <Divider />
+              <Graphic src={ComponenteleCapitaluluiGr} alt='componentele capitalului' width='600px' />
+              <Divider />
             </ContentSection>
           </ContentContainer>
         </div>
-
-        <div style={{ minHeight: '100vh' }}></div>
       </ThemeProvider>
     </>
   );
