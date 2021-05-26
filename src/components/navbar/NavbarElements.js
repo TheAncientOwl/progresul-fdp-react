@@ -123,23 +123,7 @@ export const NavMenu = styled.ul`
   }
 `;
 
-export const NavMenuItem = styled.li`
-  height: ${NAVBAR_HEIGHT};
-  padding: 8px;
-
-  ${props =>
-    props.active &&
-    props.active === true &&
-    css`
-      border-bottom: 2px solid ${props.theme.primary};
-    `}
-
-  @media (max-width: ${Breakpoints.tablet}) {
-    height: auto;
-  }
-`;
-
-export const NavLink = styled(Link)`
+export const NavSection = styled(Link)`
   display: flex;
   text-align: center;
   align-items: center;
@@ -148,24 +132,27 @@ export const NavLink = styled(Link)`
   min-width: 125px;
   max-width: 200px;
 
-  color: ${props => props.theme.secondary};
   font-size: 1.1rem;
   text-decoration: none;
-  height: 100%;
+  height: ${NAVBAR_HEIGHT};
 
+  color: ${props => props.theme.secondary};
   transition: all 0.3 ease;
 
+  border-bottom: ${props => (props.active && props.active === 'true' ? `2px solid ${props.theme.primary}` : '')};
+
   &:hover {
-    border-bottom: 0.15rem solid;
     color: ${props => props.theme.primary};
     transition: all 0.3 ease;
     cursor: pointer;
+    border-bottom: 2px solid ${props => props.theme.primary};
   }
 
   @media (max-width: ${Breakpoints.tablet}) {
     margin: 0 auto;
     font-size: 3rem;
     max-width: 600px;
+    height: auto;
   }
 
   @media (max-width: ${Breakpoints.phone}) {

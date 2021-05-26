@@ -1,39 +1,44 @@
 import React, { useState } from 'react';
-import { NavMenuToggleButton, Nav, NavContainer, NavTitle, NavMenu, NavMenuItem, NavLink } from './NavbarElements';
+import PropTypes from 'prop-types';
+import { NavMenuToggleButton, Nav, NavContainer, NavTitle, NavMenu, NavSection } from './NavbarElements';
 
-export default function Navbar() {
+export default function Navbar({ title, items }) {
   const [chapterMenuOpen, setChapterMenuOpen] = useState(false);
+  const [activeChapter, setActiveChapter] = useState(items[0].title);
 
   return (
     <>
       <NavMenuToggleButton open={chapterMenuOpen} onClick={() => setChapterMenuOpen(!chapterMenuOpen)} />
       <Nav>
         <NavContainer>
-          <NavTitle>Capitalul tehnic si progresul factorilor de productie</NavTitle>
+          <NavTitle>{title}</NavTitle>
           <NavMenu active={chapterMenuOpen}>
-            <NavMenuItem active={true}>
-              <NavLink
-                to='section-title'
-                smooth={true}
-                duration={1000}
-                offset={-90}
-                onClick={() => {
-                  setChapterMenuOpen(!chapterMenuOpen);
-                }}>
-                Tipuri de capital
-              </NavLink>
-            </NavMenuItem>
-
-            {['Aspecte', 'Dezvoltarea economică'].map((item, index) => (
-              <NavMenuItem key={index}>
-                <NavLink to='section-title' onClick={() => setChapterMenuOpen(!chapterMenuOpen)}>
-                  {item}
-                </NavLink>
-              </NavMenuItem>
-            ))}
+            {items.map((item, index) => {
+              const active = item.title === activeChapter ? 'true' : 'false';
+              return (
+                <NavSection
+                  key={index}
+                  active={active}
+                  to={item.to}
+                  smooth={true}
+                  duration={800}
+                  offset={-90}
+                  onClick={() => {
+                    setChapterMenuOpen(!chapterMenuOpen);
+                    setActiveChapter(item.title);
+                  }}>
+                  {item.title}
+                </NavSection>
+              );
+            })}
           </NavMenu>
         </NavContainer>
       </Nav>
     </>
   );
 }
+
+Navbar.propTypes = {
+  title: PropTypes.string.isRequired,
+  items: PropTypes.array.isRequired,
+};
