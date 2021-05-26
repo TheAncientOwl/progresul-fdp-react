@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 import Breakpoints from '../../Breakpoints';
 import { FaBars } from 'react-icons/fa';
+import { Link } from 'react-scroll';
 
 const NAVBAR_HEIGHT = '80px';
 
@@ -124,13 +125,21 @@ export const NavMenu = styled.ul`
 
 export const NavMenuItem = styled.li`
   height: ${NAVBAR_HEIGHT};
+  padding: 8px;
+
+  ${props =>
+    props.active &&
+    props.active === true &&
+    css`
+      border-bottom: 2px solid ${props.theme.primary};
+    `}
 
   @media (max-width: ${Breakpoints.tablet}) {
     height: auto;
   }
 `;
 
-export const NavLink = styled.a`
+export const NavLink = styled(Link)`
   display: flex;
   text-align: center;
   align-items: center;

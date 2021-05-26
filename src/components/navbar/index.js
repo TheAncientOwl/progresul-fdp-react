@@ -11,7 +11,20 @@ export default function Navbar() {
         <NavContainer>
           <NavTitle>Capitalul tehnic si progresul factorilor de productie</NavTitle>
           <NavMenu active={chapterMenuOpen}>
-            {['Tipuri de capital', 'Aspecte', 'Dezvoltarea economică'].map((item, index) => (
+            <NavMenuItem active={true}>
+              <NavLink
+                to='section-title'
+                smooth={true}
+                duration={1000}
+                offset={-90}
+                onClick={() => {
+                  setChapterMenuOpen(!chapterMenuOpen);
+                }}>
+                Tipuri de capital
+              </NavLink>
+            </NavMenuItem>
+
+            {['Aspecte', 'Dezvoltarea economică'].map((item, index) => (
               <NavMenuItem key={index}>
                 <NavLink onClick={() => setChapterMenuOpen(!chapterMenuOpen)}>{item}</NavLink>
               </NavMenuItem>
