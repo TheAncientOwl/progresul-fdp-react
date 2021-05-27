@@ -133,7 +133,7 @@ export const NavSection = styled(Link)`
   padding-bottom: 20px;
 
   min-width: 100px;
-  padding: 0 5px;
+  padding: 0 8px;
 
   font-size: 1.1rem;
   text-decoration: none;
