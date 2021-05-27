@@ -1,9 +1,12 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
+import theme from './theme';
+
 import Navbar from './components/navbar';
+
 import { ContentContainer } from './components/content/ContentElements';
 import ContentSection from './components/content';
-import theme from './theme';
+
 import TipuriDeCapital from './components/sections/capitalul-tehnic-si-progresul-fdp/TipuriDeCapital';
 import Aspecte from './components/sections/capitalul-tehnic-si-progresul-fdp/Aspecte';
 
