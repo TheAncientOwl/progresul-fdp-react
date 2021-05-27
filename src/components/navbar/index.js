@@ -24,6 +24,7 @@ export default function Navbar({ title, items }) {
 
   useEffect(() => {
     pullOffsets();
+    setActiveChapter(items[0].title);
   }, [items]);
 
   useEffect(() => {
