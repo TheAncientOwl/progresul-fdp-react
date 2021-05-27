@@ -18,6 +18,6 @@ Graphic.propTypes = {
   title: PropTypes.string.isRequired,
   src: PropTypes.any,
   alt: PropTypes.string.isRequired,
-  width: PropTypes.number.isRequired,
+  width: PropTypes.string.isRequired,
   children: PropTypes.any,
 };
