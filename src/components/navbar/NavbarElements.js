@@ -127,6 +127,7 @@ export const NavSection = styled(Link)`
   text-align: center;
   align-items: center;
   justify-content: center;
+  padding: 0 5px;
 
   min-width: 125px;
   max-width: 200px;
