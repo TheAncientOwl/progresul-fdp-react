@@ -6,6 +6,9 @@ import TipuriDeCapital from './capitalul-tehnic-si-progresul-fdp/TipuriDeCapital
 import Aspecte from './capitalul-tehnic-si-progresul-fdp/Aspecte';
 import DezvoltareaEconomica from './capitalul-tehnic-si-progresul-fdp/DezvoltareaEconomica';
 
+import ReglareaEconomica from './progresul-tehnic-economic/ReglareaEconomica';
+import InovareInovatie from './progresul-tehnic-economic/InovareInovatie';
+
 const SectionsConfig = [
   {
     title: 'Principalele categorii de factori de producție',
@@ -31,6 +34,17 @@ const SectionsConfig = [
       <TipuriDeCapital key={0} id={'tipuri-de-capital'} />,
       <Aspecte key={1} id={'aspecte'} />,
       <DezvoltareaEconomica key={2} id={'dezvoltarea-economica'} />,
+    ],
+  },
+  {
+    title: 'Progresul tehnic și progresul economic',
+    items: [
+      { title: 'Reglarea economică', to: 'reglarea-economica' },
+      { title: 'Inovare și inovație', to: 'inovare-inovație' },
+    ],
+    contents: [
+      <ReglareaEconomica key={0} id={'reglarea-economica'} />,
+      <InovareInovatie key={1} id={'inovare-inovație'} />,
     ],
   },
 ];
