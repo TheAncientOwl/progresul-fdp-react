@@ -145,7 +145,6 @@ export const NavSection = styled(Link)`
     color: ${props => props.theme.primary};
     transition: all 0.3 ease;
     cursor: pointer;
-    border-bottom: 2px solid ${props => props.theme.primary};
   }
 
   @media (max-width: ${Breakpoints.tablet}) {
