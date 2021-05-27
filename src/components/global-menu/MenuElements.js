@@ -26,7 +26,7 @@ export const MenuButton = styled(BiFoodMenu)`
   }
 `;
 
-export const MenuContainer = styled.ul`
+export const MenuContainer = styled.div`
   overflow-y: auto;
   position: fixed;
   top: 0;
