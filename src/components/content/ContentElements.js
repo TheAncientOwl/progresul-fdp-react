@@ -56,7 +56,7 @@ export const Paragraph = styled.div`
   max-width: 1000px;
   margin-top: 10px;
   color: ${props => props.theme.text.primary};
-  padding: 0 10px;
+  padding: 15px 10px 0 10px;
 `;
 
 export const ParagraphIndent = styled.span`
