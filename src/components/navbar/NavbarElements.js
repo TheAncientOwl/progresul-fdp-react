@@ -63,7 +63,6 @@ export const NavTitle = styled.div`
   -moz-text-fill-color: transparent;
   display: flex;
   align-items: center;
-  cursor: pointer;
   font-size: 1.25rem;
 
   text-align: center;
