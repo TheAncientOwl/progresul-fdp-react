@@ -126,15 +126,14 @@ export const NavMenu = styled.ul`
 `;
 
 export const NavSection = styled(Link)`
-  width: 100%;
   display: flex;
   text-align: center;
   align-items: center;
   justify-content: center;
   padding-bottom: 20px;
 
-  min-width: 125px;
-  max-width: 200px;
+  min-width: 100px;
+  padding: 0 5px;
 
   font-size: 1.1rem;
   text-decoration: none;
