@@ -51,7 +51,7 @@ export default function Navbar({ title, items }) {
                   active={active}
                   to={item.to}
                   smooth={true}
-                  duration={800}
+                  duration={1200}
                   offset={-90}
                   onClick={() => {
                     setChapterMenuOpen(!chapterMenuOpen);
