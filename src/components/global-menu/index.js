@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { MenuButton, MenuContainer, MenuLink, MenuTitle } from './MenuElements';
+import { MenuButton, MenuContainer, MenuLink, MenuSubchapter, MenuTitle } from './MenuElements';
 import SectionsConfig from '../sections/SectionsConfig';
 import { moveToTopAnchor } from '../../utils/TopAnchor';
 
@@ -26,6 +26,9 @@ export default function Menu({ onSectionChange, currentSection }) {
                 moveToTopAnchor();
               }}>
               {section.title}
+              {section.items.map(item => (
+                <MenuSubchapter key={item.to}>{item.title}</MenuSubchapter>
+              ))}
             </MenuLink>
           );
         })}

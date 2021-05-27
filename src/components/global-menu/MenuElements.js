@@ -27,6 +27,7 @@ export const MenuButton = styled(BiFoodMenu)`
 `;
 
 export const MenuContainer = styled.ul`
+  overflow-y: auto;
   position: fixed;
   top: 0;
   left: -1000px;
@@ -110,4 +111,10 @@ export const MenuLink = styled.div`
     width: 85%;
     margin-top: 25px;
   }
+`;
+
+export const MenuSubchapter = styled.div`
+  padding-top: 10px;
+  font-size: 1rem;
+  color: ${props => props.theme.text.primary};
 `;
