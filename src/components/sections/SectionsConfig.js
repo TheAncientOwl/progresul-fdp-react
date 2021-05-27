@@ -1,8 +1,25 @@
+import Munca from './principalele-categorii-de-fdp/Munca';
+import Natura from './principalele-categorii-de-fdp/Natura';
+import Capitalul from './principalele-categorii-de-fdp/Capitalul';
+
+import TipuriDeCapital from './capitalul-tehnic-si-progresul-fdp/TipuriDeCapital';
 import Aspecte from './capitalul-tehnic-si-progresul-fdp/Aspecte';
 import DezvoltareaEconomica from './capitalul-tehnic-si-progresul-fdp/DezvoltareaEconomica';
-import TipuriDeCapital from './capitalul-tehnic-si-progresul-fdp/TipuriDeCapital';
 
 const SectionsConfig = [
+  {
+    title: 'Principalele categorii de factori de producție',
+    items: [
+      { title: 'Munca', to: 'munca' },
+      { title: 'Natura', to: 'natura' },
+      { title: 'Capitalul', to: 'capitalul' },
+    ],
+    contents: [
+      <Munca key={0} id={'munca'} />,
+      <Natura key={1} id={'natura'} />,
+      <Capitalul key={2} id={'capitalul'} />,
+    ],
+  },
   {
     title: 'Capitalul tehnic și progresul factorilor de producție',
     items: [
