@@ -18,9 +18,9 @@ export const NavMenuToggleButton = styled(FaBars)`
   }
 
   @media (max-width: ${Breakpoints.phone}) {
-    top: 0.7rem;
+    top: 0.8rem;
     right: 0.7rem;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
   }
 `;
 
@@ -64,10 +64,13 @@ export const NavTitle = styled.div`
   display: flex;
   align-items: center;
   font-size: 1.25rem;
+  padding-left: 25px;
 
   text-align: center;
 
   @media (max-width: ${Breakpoints.tablet}) {
+    padding-left: 0;
+    justify-content: center;
     margin: 0 auto;
 
     width: 600px;
@@ -75,7 +78,7 @@ export const NavTitle = styled.div`
   }
 
   @media (max-width: ${Breakpoints.phone}) {
-    width: 290px;
+    width: 75vw;
     font-size: 1.2rem;
   }
 
