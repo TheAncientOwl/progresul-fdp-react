@@ -12,6 +12,7 @@ import {
 } from '../../content/ContentElements';
 import ContentSection from '../../content';
 import ComponenteleCapitaluluiGr from '../../../images/componentele_capitalului.png';
+import StareaCapitaluluiFixGr from '../../../images/starea_capitalului_fix.png';
 import Graphic from '../../graphic';
 
 export default function TipuriDeCapital({ id }) {
@@ -76,7 +77,14 @@ export default function TipuriDeCapital({ id }) {
         consumate sau transformate în cursul acestuia și trebuie înlocuite cu fiecare nou ciclu de producție.
       </Paragraph>
       <Divider />
-      <Graphic title='Componentele capitalului' src={ComponenteleCapitaluluiGr} alt='componentele capitalului'>
+      <Graphic
+        title='Componentele capitalului'
+        src={ComponenteleCapitaluluiGr}
+        alt='componentele capitalului'
+        width='450'>
+        <Divider />
+      </Graphic>
+      <Graphic title='Starea capitalului fix' src={StareaCapitaluluiFixGr} alt='starea capitalului fix' width='700'>
         <Divider />
       </Graphic>
     </ContentSection>
