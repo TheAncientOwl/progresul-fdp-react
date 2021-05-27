@@ -3,14 +3,10 @@ import Breakpoints from '../../Breakpoints';
 
 export const GraphicContainer = styled.div`
   margin: 0 auto;
-  width: 600px;
+  width: 400px;
 
   @media (max-width: ${Breakpoints.tablet}) {
-    width: 500px;
-  }
-
-  @media (max-width: ${Breakpoints.phone}) {
-    width: 250px;
+    display: none;
   }
 `;
 
@@ -33,9 +29,7 @@ export const GraphicTitle = styled.div`
   border-radius: 0.6rem;
   width: 65%;
 
-  @media (max-width: ${Breakpoints.phone}) {
-    font-size: 0.9rem;
-    padding: 10px 5px;
-    width: 80%;
+  @media (max-width: ${Breakpoints.tablet}) {
+    display: none;
   }
 `;

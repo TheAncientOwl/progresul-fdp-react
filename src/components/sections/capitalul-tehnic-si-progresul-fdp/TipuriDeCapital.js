@@ -76,8 +76,9 @@ export default function TipuriDeCapital({ id }) {
         consumate sau transformate în cursul acestuia și trebuie înlocuite cu fiecare nou ciclu de producție.
       </Paragraph>
       <Divider />
-      <Graphic title='Componentele capitalului' src={ComponenteleCapitaluluiGr} alt='componentele capitalului' />
-      <Divider />
+      <Graphic title='Componentele capitalului' src={ComponenteleCapitaluluiGr} alt='componentele capitalului'>
+        <Divider />
+      </Graphic>
     </ContentSection>
   );
 }
