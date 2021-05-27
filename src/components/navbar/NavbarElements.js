@@ -136,7 +136,7 @@ export const NavSection = styled(Link)`
   text-decoration: none;
   height: ${NAVBAR_HEIGHT};
 
-  color: ${props => props.theme.secondary};
+  color: ${props => (props.active && props.active === 'true' ? props.theme.primary : props.theme.secondary)};
   transition: all 0.3 ease;
 
   border-bottom: ${props => (props.active && props.active === 'true' ? `2px solid ${props.theme.primary}` : '')};
