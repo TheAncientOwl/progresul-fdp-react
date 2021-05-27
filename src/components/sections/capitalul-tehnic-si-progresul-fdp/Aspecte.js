@@ -10,7 +10,9 @@ import {
   SectionSubTitle,
   Divider,
 } from '../../content/ContentElements';
+import AspecteCantitativeCalitativeGr from '../../../images/aspecte_cantitative_si_calitative_fdp.png';
 import ContentSection from '../../content';
+import Graphic from '../../graphic';
 
 export default function Aspecte({ id }) {
   return (
@@ -91,6 +93,13 @@ export default function Aspecte({ id }) {
         Procesul de recuperare treptată a valorii capitalului se numește amortizare.
       </Paragraph>
       <Divider />
+      <Graphic
+        title='Aspecte cantitative și calitative ale factorilor de producție'
+        src={AspecteCantitativeCalitativeGr}
+        alt='aspecte cantitative și calitative ale factorilor de producție'
+        width='450'>
+        <Divider />
+      </Graphic>
     </ContentSection>
   );
 }
