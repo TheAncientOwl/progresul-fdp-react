@@ -107,7 +107,7 @@ export const NavMenu = styled.ul`
     display: grid;
     grid-template-columns: auto;
 
-    height: 60vh;
+    height: 40vh;
     width: 100%;
 
     background: ${props => props.theme.nav.background};
@@ -123,11 +123,12 @@ export const NavMenu = styled.ul`
 `;
 
 export const NavSection = styled(Link)`
+  width: 100%;
   display: flex;
   text-align: center;
   align-items: center;
   justify-content: center;
-  padding: 0 5px;
+  padding-bottom: 20px;
 
   min-width: 125px;
   max-width: 200px;

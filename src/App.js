@@ -9,7 +9,7 @@ import { ContentContainer } from './components/content/ContentElements';
 import SectionsConfig from './components/sections/SectionsConfig';
 
 export default function App() {
-  const [currentSection] = useState(SectionsConfig[2]);
+  const [currentSection] = useState(SectionsConfig[0]);
 
   return (
     <>
