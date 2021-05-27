@@ -32,13 +32,13 @@ export const MenuContainer = styled.ul`
   top: 0;
   left: -1000px;
 
-  transition: all 0.5s ease;
+  transition: all 0.8s ease;
   ${props =>
     props.active &&
     props.active === true &&
     css`
       left: 0;
-      transition: all 0.5s ease;
+      transition: all 0.8s ease;
     `}
 
   width: 40vw;
