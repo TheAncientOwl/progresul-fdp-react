@@ -39,7 +39,7 @@ export default function App() {
   const items = [
     { title: 'Tipuri de capital', to: 'tipuri-de-capital' },
     { title: 'Aspecte', to: 'aspecte' },
-    { title: 'Dezvoltarea economică', to: 'section-title' },
+    { title: 'Dezvoltarea economică', to: 'dezvoltarea-economica' },
   ];
 
   return (
@@ -196,6 +196,7 @@ export default function App() {
               </Paragraph>
               <Divider />
             </ContentSection>
+            <ContentSection id='dezvoltarea-economica'></ContentSection>
           </ContentContainer>
         </>
       </ThemeProvider>
