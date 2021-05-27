@@ -102,8 +102,7 @@ export const SectionSubTitle = styled.div`
   font-size: 1.25rem;
   font-style: italic;
   color: ${props => props.theme.secondary};
-  margin-left: 45px;
-  margin-bottom: 15px;
+  margin: 20px 0 15px 45px;
 
   @media (max-width: ${Breakpoints.phone}) {
     margin-left: 25px;
