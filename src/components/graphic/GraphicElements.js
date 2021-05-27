@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Breakpoints from '../../Breakpoints';
 
 export const GraphicContainer = styled.div`
-  margin: 60px auto 0 auto;
+  margin: 0 auto;
   width: ${props => `${props.width}px`};
 
   @media (max-width: ${Breakpoints.tablet}) {
