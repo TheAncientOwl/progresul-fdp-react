@@ -56,7 +56,7 @@ export const MenuContainer = styled.div`
 `;
 
 export const MenuTitle = styled.div`
-  margin: 0 auto;
+  margin: 10px auto;
   font-size: 1.2rem;
   text-align: center;
   width: 20%;
@@ -66,7 +66,6 @@ export const MenuTitle = styled.div`
   padding: 15px;
 
   @media (max-width: ${Breakpoints.tablet}) {
-    margin-top: 10px;
     font-size: 2rem;
   }
 
