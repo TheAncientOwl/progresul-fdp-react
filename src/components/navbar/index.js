@@ -16,7 +16,7 @@ export default function Navbar({ title, items }) {
         $offsets.push(0);
         continue;
       }
-      $offsets.push(element.offsetTop - 160);
+      $offsets.push(element.offsetTop - 150);
     }
     $offsets.push($offsets[$offsets.length - 1] * 10000);
     setOffsets($offsets);
