@@ -7,7 +7,7 @@ export default function Navbar({ title, items }) {
   const [activeChapter, setActiveChapter] = useState(items[0].title);
   const [offsets, setOffsets] = useState([]);
 
-  useEffect(() => {
+  const pullOffsets = () => {
     const $offsets = [];
     for (let item of items) {
       const element = document.getElementById(item.to);
@@ -20,7 +20,16 @@ export default function Navbar({ title, items }) {
     }
     $offsets.push($offsets[$offsets.length - 1] * 10000);
     setOffsets($offsets);
+  };
+
+  useEffect(() => {
+    pullOffsets();
   }, [items]);
+
+  useEffect(() => {
+    window.addEventListener('resize', pullOffsets);
+    return () => window.removeEventListener('resize', pullOffsets);
+  });
 
   useEffect(() => {
     const onScroll = e => {
