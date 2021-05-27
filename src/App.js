@@ -5,10 +5,10 @@ import theme from './theme';
 import Navbar from './components/navbar';
 
 import { ContentContainer } from './components/content/ContentElements';
-import ContentSection from './components/content';
 
 import TipuriDeCapital from './components/sections/capitalul-tehnic-si-progresul-fdp/TipuriDeCapital';
 import Aspecte from './components/sections/capitalul-tehnic-si-progresul-fdp/Aspecte';
+import DezvoltareaEconomica from './components/sections/capitalul-tehnic-si-progresul-fdp/DezvoltareaEconomica';
 
 export default function App() {
   const items = [
@@ -25,7 +25,7 @@ export default function App() {
           <ContentContainer>
             <TipuriDeCapital id='tipuri-de-capital' />
             <Aspecte id='aspecte' />
-            <ContentSection id='dezvoltarea-economica'></ContentSection>
+            <DezvoltareaEconomica id='dezvoltarea-economica' />
           </ContentContainer>
         </>
       </ThemeProvider>
