@@ -53,10 +53,7 @@ export default function Navbar({ title, items }) {
                   smooth={true}
                   duration={1200}
                   offset={-90}
-                  onClick={() => {
-                    setChapterMenuOpen(!chapterMenuOpen);
-                    setActiveChapter(item.title);
-                  }}>
+                  onClick={() => setChapterMenuOpen(!chapterMenuOpen)}>
                   {item.title}
                 </NavSection>
               );
