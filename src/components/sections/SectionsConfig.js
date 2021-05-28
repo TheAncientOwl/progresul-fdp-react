@@ -14,6 +14,8 @@ import RezistentaSociala from './progresul-tehnic-societatea/RezistentaSociala';
 
 import Concluzii from './progresul-fdp/Concluzii';
 
+import Test from './aplicatii/test';
+
 const SectionsConfig = [
   {
     title: 'Principalele categorii de factori de producție',
@@ -67,6 +69,11 @@ const SectionsConfig = [
     title: 'Progresul factorilor de producție',
     items: [{ title: 'Concluzii', to: 'concluzii' }],
     contents: [<Concluzii key={0} id={'concluzii'} />],
+  },
+  {
+    title: 'Aplicații',
+    items: [{ title: 'Test', to: 'test' }],
+    contents: [<Test key={0} id={'test'} />],
   },
 ];
 
