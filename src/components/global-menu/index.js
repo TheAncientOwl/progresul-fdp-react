@@ -13,7 +13,7 @@ export default function Menu({ onSectionChange, currentSection }) {
     <>
       <MenuButton onClick={() => setActiveMenu(!activeMenu)} />
       <MenuContainer active={activeMenu} onClick={closeMenu}>
-        <MenuTitle>Meniu</MenuTitle>
+        <MenuTitle>Cuprins</MenuTitle>
         {SectionsConfig.map((section, index) => {
           const active = section.title === currentSection.title ? 'true' : 'false';
           return (
