@@ -12,6 +12,8 @@ import InovareInovatie from './progresul-tehnic-economic/InovareInovatie';
 import TendinteleCercetarii from './progresul-tehnic-societatea/TendinteleCercetarii';
 import RezistentaSociala from './progresul-tehnic-societatea/RezistentaSociala';
 
+import Concluzii from './progresul-fdp/Concluzii';
+
 const SectionsConfig = [
   {
     title: 'Principalele categorii de factori de producție',
@@ -60,6 +62,11 @@ const SectionsConfig = [
       <TendinteleCercetarii key={0} id={'tendintele-cercetarii'} />,
       <RezistentaSociala key={1} id={'rezistenta-sociala'} />,
     ],
+  },
+  {
+    title: 'Progresul factorilor de producție',
+    items: [{ title: 'Concluzii', to: 'concluzii' }],
+    contents: [<Concluzii key={0} id={'concluzii'} />],
   },
 ];
 
