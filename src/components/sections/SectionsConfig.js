@@ -9,6 +9,9 @@ import DezvoltareaEconomica from './capitalul-tehnic-si-progresul-fdp/Dezvoltare
 import ReglareaEconomica from './progresul-tehnic-economic/ReglareaEconomica';
 import InovareInovatie from './progresul-tehnic-economic/InovareInovatie';
 
+import TendinteleCercetarii from './progresul-tehnic-societatea/TendinteleCercetarii';
+import RezistentaSociala from './progresul-tehnic-societatea/RezistentaSociala';
+
 const SectionsConfig = [
   {
     title: 'Principalele categorii de factori de producție',
@@ -45,6 +48,17 @@ const SectionsConfig = [
     contents: [
       <ReglareaEconomica key={0} id={'reglarea-economica'} />,
       <InovareInovatie key={1} id={'inovare-inovație'} />,
+    ],
+  },
+  {
+    title: 'Progresul tehnic și societatea',
+    items: [
+      { title: 'Tendințele cercetării științifice pe termen lung', to: 'tendintele-cercetarii' },
+      { title: 'Rezistența socială la progresul tehnic', to: 'rezistenta-sociala' },
+    ],
+    contents: [
+      <TendinteleCercetarii key={0} id={'tendintele-cercetarii'} />,
+      <RezistentaSociala key={1} id={'rezistenta-sociala'} />,
     ],
   },
 ];
