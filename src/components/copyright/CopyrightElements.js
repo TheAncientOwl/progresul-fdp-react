@@ -15,6 +15,6 @@ export const CopyrightContainer = styled.div`
 
   @media (max-width: ${Breakpoints.phone}) {
     width: 90vw;
-    font-size: 0.9rem;
+    font-size: 0.7rem;
   }
 `;
