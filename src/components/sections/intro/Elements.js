@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Breakpoints from '../../../Breakpoints';
+import { Paragraph } from '../../content/ContentElements';
 
 export const Text = styled.div`
   background-image: ${props => `linear-gradient(to top, ${props.theme.secondary} 0%, ${props.theme.primary} 100%)`};
@@ -64,4 +65,12 @@ export const Left = styled.div`
 
 export const Right = styled.div`
   text-align: right;
+`;
+
+export const Quote = styled(Paragraph)`
+  @media (min-width: ${Breakpoints.tablet}) {
+    width: 55%;
+    margin-right: 0;
+    font-style: italic;
+  } //style={{ width: '55%', marginRight: 0, fontStyle: 'italic' }}
 `;

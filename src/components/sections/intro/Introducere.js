@@ -9,19 +9,20 @@ import {
   SectionListItem,
   SectionTitle,
 } from '../../content/ContentElements';
+import { Quote } from './Elements';
 
 export default function Introducere({ id }) {
   return (
     <ContentSection id={id}>
       <SectionTitle>Introducere</SectionTitle>
-      <Paragraph style={{ width: '55%', marginRight: 0, fontStyle: 'italic' }}>
+      <Quote>
         <ParagraphIndent />
         &quot;Așa cum îl folosesc economiștii, capitalul înseamnă mijloace produse pentru producție sau bunuri care pot
         fi folosite pentru a produce bunuri viitoare. Mașinile sunt capital ca și clădirile industriale si comerciale.
         Dar, la fel sunt cunoștintele și măiestria profesională pe care oamenii le acumulează prin educație, calificare
         sau experiență și care le permit să furnizeze servicii productive valoroase pentru ceilalți.&quot;{' '}
         <sup>[1]</sup>
-      </Paragraph>
+      </Quote>
       <Divider />
       <Paragraph>
         <ParagraphIndent />
