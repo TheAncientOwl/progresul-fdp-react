@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Breakpoints from '../../../Breakpoints';
 
 export const Text = styled.div`
   background-image: ${props => `linear-gradient(to top, ${props.theme.secondary} 0%, ${props.theme.primary} 100%)`};
@@ -14,18 +15,31 @@ export const Title = styled.div`
   margin-top: 25px;
   text-align: center;
   font-size: 1.7rem;
+
+  @media (max-width: ${Breakpoints.phone}) {
+    font-size: 1.5rem;
+    margin-top: 15px;
+  }
 `;
 
 export const Year = styled.div`
   margin-top: 15px;
   text-align: center;
   font-size: 1.4rem;
+
+  @media (max-width: ${Breakpoints.phone}) {
+    font-size: 1.2rem;
+  }
 `;
 
 export const Subtitle = styled.div`
   margin-top: 45px;
   text-align: center;
   font-size: 1.6rem;
+
+  @media (max-width: ${Breakpoints.phone}) {
+    font-size: 1.25rem;
+  }
 `;
 
 export const Info = styled.div`
@@ -35,6 +49,13 @@ export const Info = styled.div`
 
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: ${Breakpoints.phone}) {
+    font-size: 0.9rem;
+    margin-top: 60px;
+    margin-bottom: 15px;
+    width: 90%;
+  }
 `;
 
 export const Left = styled.div`
