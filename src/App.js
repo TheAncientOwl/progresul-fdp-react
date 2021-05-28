@@ -9,6 +9,7 @@ import { ContentContainer } from './components/content/ContentElements';
 import SectionsConfig from './components/sections/SectionsConfig';
 import Menu from './components/global-menu';
 import { TopAnchor } from './utils/TopAnchor';
+import Copyright from './components/copyright';
 
 export default function App() {
   const [currentSection, setCurrentSection] = useState(SectionsConfig[0]);
@@ -21,6 +22,7 @@ export default function App() {
           <Navbar title={currentSection.title} items={currentSection.items} />
           <TopAnchor />
           <ContentContainer>{currentSection.contents}</ContentContainer>
+          <Copyright />
         </>
       </ThemeProvider>
     </>
