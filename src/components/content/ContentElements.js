@@ -16,7 +16,7 @@ export const ImplContentSection = styled.div`
   width: 100%;
   margin-bottom: 50px;
   padding: 5px 25px;
-  min-height: 90vh;
+  min-height: 70vh;
 
   @media (max-width: ${Breakpoints.tablet}) {
     padding: 5px 20px;
