@@ -15,8 +15,24 @@ import RezistentaSociala from './progresul-tehnic-societatea/RezistentaSociala';
 import Concluzii from './progresul-fdp/Concluzii';
 
 import Test from './aplicatii/test';
+import Detalii from './intro/Detalii';
+import Introducere from './intro/Introducere';
+import Argument from './intro/Argument';
 
 const SectionsConfig = [
+  {
+    title: 'Progresul Factorilor de Producție',
+    items: [
+      { title: 'Detalii', to: 'detalii' },
+      { title: 'Introducere', to: 'introducere' },
+      { title: 'Argument', to: 'argument' },
+    ],
+    contents: [
+      <Detalii key={0} id={'detalii'} />,
+      <Introducere key={1} id={'introducere'} />,
+      <Argument key={2} id={'argument'} />,
+    ],
+  },
   {
     title: 'Principalele categorii de factori de producție',
     items: [
