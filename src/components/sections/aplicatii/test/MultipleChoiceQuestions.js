@@ -30,7 +30,7 @@ const MultipleChoiceQuestions = [
       'este un aspect cantitativ al progresului factorilor de producție',
       'este un aspect calitativ al progresului factorilor de prducție',
     ],
-    correctIndex: 4,
+    correctIndex: 3,
     name: 'q4',
   },
   {
@@ -77,7 +77,7 @@ const MultipleChoiceQuestions = [
       'prin substituirea muncii cu alți factori de producție | prin aplicarea inovațiilor',
     ],
     correctIndex: 0,
-    name: 'q8',
+    name: 'q9',
   },
 ];
 

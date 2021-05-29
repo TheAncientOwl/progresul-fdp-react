@@ -2,29 +2,48 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {
   Answer,
+  AnswerContainer,
   PotentialAnswersList,
   Question,
   QuestionContainer,
-  AnswerContainer,
   RadioButton,
   RadioButtonLabel,
 } from './TestElements';
 
-export default function MultipleChoice({ question, answers, correctIndex, name }) {
-  console.log(correctIndex);
-  const onChange = e => {
-    console.log(e.target.value);
+export default function MultipleChoice({
+  question,
+  answers,
+  name,
+  onAnswerChange,
+  hideRadio,
+  correctIndex,
+  selectedIndex,
+}) {
+  const answerFormat = (item, name, index, correct) => {
+    if (hideRadio) {
+      return (
+        <Answer correct={correct} selected={index == selectedIndex ? 'true' : 'false'}>
+          {item}
+        </Answer>
+      );
+    }
+
+    return (
+      <>
+        <RadioButton type='radio' name={name} value={index} />
+        <RadioButtonLabel />
+        <Answer>{item}</Answer>
+      </>
+    );
   };
 
   return (
     <QuestionContainer>
       <Question>{question}</Question>
-      <PotentialAnswersList onChange={onChange}>
+      <PotentialAnswersList onChange={e => onAnswerChange(e.target.value)}>
         {answers.map((item, index) => (
           <AnswerContainer key={index}>
-            <RadioButton type='radio' name={name} value={index} />
-            <RadioButtonLabel />
-            <Answer>{item}</Answer>
+            {answerFormat(item, name, index, index == correctIndex ? 'true' : 'false')}
           </AnswerContainer>
         ))}
       </PotentialAnswersList>
@@ -35,6 +54,9 @@ export default function MultipleChoice({ question, answers, correctIndex, name }
 MultipleChoice.propTypes = {
   question: PropTypes.string.isRequired,
   answers: PropTypes.array.isRequired,
-  correctIndex: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
+  onAnswerChange: PropTypes.func.isRequired,
+  hideRadio: PropTypes.bool.isRequired,
+  correctIndex: PropTypes.number.isRequired,
+  selectedIndex: PropTypes.number.isRequired,
 };

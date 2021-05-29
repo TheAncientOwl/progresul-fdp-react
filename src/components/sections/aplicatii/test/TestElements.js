@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const QuestionContainer = styled.div`
   padding: 5px 20px;
@@ -50,4 +50,46 @@ export const RadioButton = styled.input`
 
 export const Answer = styled.div`
   color: ${props => props.theme.text.primary};
+
+  ${props =>
+    props.selected &&
+    props.selected === 'true' &&
+    css`
+      color: red;
+      font-style: italic;
+    `};
+
+  ${props =>
+    props.correct &&
+    props.correct === 'true' &&
+    css`
+      color: ${props.theme.secondary};
+      font-style: italic;
+    `}
+`;
+
+export const Button = styled.div`
+  font-size: 1.2rem;
+  width: 20%;
+  border: 1px solid;
+  color: ${props => props.theme.secondary};
+  border-radius: 0.4rem;
+  text-align: center;
+  padding: 10px;
+  margin: 5px auto 15px auto;
+  cursor: pointer;
+
+  &:hover {
+    color: ${props => props.theme.primary};
+  }
+`;
+
+export const Score = styled.div`
+  font-size: 1.4rem;
+  border: 1px solid;
+  color: ${props => props.theme.primary};
+  border-radius: 0.4rem;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 15px;
 `;
