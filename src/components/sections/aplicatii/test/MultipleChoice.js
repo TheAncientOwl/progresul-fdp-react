@@ -1,62 +1,38 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {
-  Answer,
-  AnswerContainer,
-  PotentialAnswersList,
-  Question,
-  QuestionContainer,
-  RadioButton,
-  RadioButtonLabel,
-} from './TestElements';
+import MultipleChoiceQuestions from './MultipleChoiceQuestions';
+import { AnswerText, AnswerBox, AnswersList, Question, QuestionContainer } from './TestElements';
+import RadioButton from './RadioButton';
 
-export default function MultipleChoice({
-  question,
-  answers,
-  name,
-  onAnswerChange,
-  hideRadio,
-  correctIndex,
-  selectedIndex,
-}) {
-  const answerFormat = (item, name, index, correct) => {
-    if (hideRadio) {
-      return (
-        <Answer correct={correct} selected={index == selectedIndex ? 'true' : 'false'}>
-          {item}
-        </Answer>
-      );
-    }
+export default function MultipleChoice({ choiceIndex, onAnswerChange, submitted, selectedIndex }) {
+  const { question, answers, name, correctIndex } = MultipleChoiceQuestions[choiceIndex];
 
-    return (
-      <>
-        <RadioButton type='radio' name={name} value={index} />
-        <RadioButtonLabel />
-        <Answer>{item}</Answer>
-      </>
-    );
-  };
+  const answersList = answers.map((answerText, index) => (
+    <AnswerBox key={index}>
+      {submitted ? (
+        <AnswerText correct={index == correctIndex} selected={index == selectedIndex}>
+          {answerText}
+        </AnswerText>
+      ) : (
+        <>
+          <RadioButton name={name} value={index} />
+          <AnswerText>{answerText}</AnswerText>
+        </>
+      )}
+    </AnswerBox>
+  ));
 
   return (
     <QuestionContainer>
       <Question>{question}</Question>
-      <PotentialAnswersList onChange={e => onAnswerChange(e.target.value)}>
-        {answers.map((item, index) => (
-          <AnswerContainer key={index}>
-            {answerFormat(item, name, index, index == correctIndex ? 'true' : 'false')}
-          </AnswerContainer>
-        ))}
-      </PotentialAnswersList>
+      <AnswersList onChange={e => onAnswerChange(e.target.value)}>{answersList}</AnswersList>
     </QuestionContainer>
   );
 }
 
 MultipleChoice.propTypes = {
-  question: PropTypes.string.isRequired,
-  answers: PropTypes.array.isRequired,
-  name: PropTypes.string.isRequired,
+  choiceIndex: PropTypes.number.isRequired,
   onAnswerChange: PropTypes.func.isRequired,
-  hideRadio: PropTypes.bool.isRequired,
-  correctIndex: PropTypes.number.isRequired,
-  selectedIndex: PropTypes.number.isRequired,
+  submitted: PropTypes.bool.isRequired,
+  selectedIndex: PropTypes.any,
 };

@@ -10,12 +10,12 @@ export const Question = styled.div`
   color: ${props => props.theme.text.secondary};
 `;
 
-export const PotentialAnswersList = styled.div`
+export const AnswersList = styled.div`
   margin-top: 8px;
   margin-left: 25px;
 `;
 
-export const AnswerContainer = styled.div`
+export const AnswerBox = styled.div`
   display: flex;
   align-items: center;
   height: 40px;
@@ -48,41 +48,41 @@ export const RadioButton = styled.input`
   }
 `;
 
-export const Answer = styled.div`
-  color: ${props => props.theme.text.primary};
+export const AnswerText = styled.div(
+  ({ theme, selected, correct }) => css`
+    color: ${theme.text.primary};
 
-  ${props =>
-    props.selected &&
-    props.selected === 'true' &&
+    ${selected &&
     css`
       color: red;
       font-style: italic;
     `};
 
-  ${props =>
-    props.correct &&
-    props.correct === 'true' &&
+    ${correct &&
     css`
-      color: ${props.theme.secondary};
+      color: ${theme.secondary};
       font-style: italic;
     `}
-`;
+  `
+);
 
-export const Button = styled.div`
-  font-size: 1.2rem;
-  width: 20%;
-  border: 1px solid;
-  color: ${props => props.theme.secondary};
-  border-radius: 0.4rem;
-  text-align: center;
-  padding: 10px;
-  margin: 5px auto 15px auto;
-  cursor: pointer;
+export const Button = styled.div(
+  ({ theme }) => css`
+    font-size: 1.2rem;
+    width: 20%;
+    border: 1px solid;
+    color: ${theme.secondary};
+    border-radius: 0.4rem;
+    text-align: center;
+    padding: 10px;
+    margin: 5px auto 15px auto;
+    cursor: pointer;
 
-  &:hover {
-    color: ${props => props.theme.primary};
-  }
-`;
+    &:hover {
+      color: ${theme.primary};
+    }
+  `
+);
 
 export const Score = styled.div`
   font-size: 1.4rem;

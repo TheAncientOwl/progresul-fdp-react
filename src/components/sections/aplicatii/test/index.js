@@ -22,13 +22,29 @@ export default function Test({ id }) {
     setAnswers(newAnswers);
   };
 
-  const showSubmit = () => {
-    const fullSelected = () => {
+  const postSolveButton = () => {
+    if (submitted) {
+      const resetTest = () => {
+        setAnswers(new Array(MultipleChoiceQuestions.length));
+        setSubmitted(false);
+      };
+
+      return (
+        <>
+          <Button onClick={resetTest}>Reia testul</Button>
+          <Score>Ai obținut {calcScore()} / 100 puncte!</Score>
+        </>
+      );
+    }
+
+    const allSelected = () => {
       const selected = answers.reduce((accumulator, currentValue) => accumulator + (currentValue !== undefined), 0);
       return selected == MultipleChoiceQuestions.length;
     };
 
-    return !submitted && fullSelected();
+    if (allSelected()) {
+      return <Button onClick={() => setSubmitted(true)}>Submit</Button>;
+    }
   };
 
   return (
@@ -37,39 +53,14 @@ export default function Test({ id }) {
       {MultipleChoiceQuestions.map((item, index) => (
         <MultipleChoice
           key={index}
-          question={item.question}
-          answers={item.answers}
-          correctIndex={item.correctIndex}
-          name={item.name}
+          choiceIndex={index}
           onAnswerChange={answer => setAnswer(answer, index)}
-          hideRadio={submitted}
+          submitted={submitted}
           selectedIndex={answers[index]}
         />
       ))}
       <Divider />
-
-      {showSubmit() && (
-        <Button
-          onClick={() => {
-            setSubmitted(true);
-            calcScore();
-          }}>
-          Submit
-        </Button>
-      )}
-
-      {submitted && (
-        <>
-          <Button
-            onClick={() => {
-              setAnswers(new Array(MultipleChoiceQuestions.length));
-              setSubmitted(false);
-            }}>
-            Reia testul
-          </Button>
-          <Score>Ai obținut {calcScore()} / 100 puncte!</Score>
-        </>
-      )}
+      {postSolveButton()}
     </ContentSection>
   );
 }
