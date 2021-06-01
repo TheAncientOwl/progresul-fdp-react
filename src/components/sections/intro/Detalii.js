@@ -11,7 +11,7 @@ export default function Detalii() {
       </Title>
 
       <Year>
-        <Text>Anul școlar 2017 - 2019</Text>
+        <Text>Anul școlar 2017 - 2018</Text>
       </Year>
 
       <Subtitle>
