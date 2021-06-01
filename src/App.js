@@ -12,7 +12,7 @@ import { TopAnchor } from './utils/TopAnchor';
 import Copyright from './components/copyright';
 
 export default function App() {
-  const [currentSection, setCurrentSection] = useState(SectionsConfig[SectionsConfig.length - 1]);
+  const [currentSection, setCurrentSection] = useState(SectionsConfig[0]);
 
   return (
     <>
