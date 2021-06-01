@@ -5,7 +5,7 @@ import Words from './Words';
 import { Container, CrosswordsBody, CrosswordsWrapper, Hint, HintsContainer, HintWord } from './RebusElements';
 import Crossword from './Crossword';
 import { Button } from '../test/TestElements';
-import { Divider } from '../../../content/ContentElements';
+import { Divider, SectionTitle } from '../../../content/ContentElements';
 
 export default function Rebus({ id }) {
   const [answers, setAnswers] = useState(new Array(Words.length));
@@ -50,6 +50,7 @@ export default function Rebus({ id }) {
 
   return (
     <ContentSection id={id}>
+      <SectionTitle>Rebus</SectionTitle>
       <Container>
         <CrosswordsWrapper>
           <CrosswordsBody>{crosswords}</CrosswordsBody>
