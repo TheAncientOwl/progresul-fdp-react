@@ -1,6 +1,7 @@
 const theme = {
   primary: '#50E627',
   secondary: '#36991A',
+  background: '#131313',
   nav: {
     background: '#131313',
     title: {
