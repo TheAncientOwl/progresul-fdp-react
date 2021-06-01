@@ -1,6 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import ContentSection from '../../content';
 import {
   Divider,
   Paragraph,
@@ -11,9 +9,9 @@ import {
   SectionTitle,
 } from '../../content/ContentElements';
 
-export default function TendinteleCercetarii({ id }) {
+export default function TendinteleCercetarii() {
   return (
-    <ContentSection id={id}>
+    <>
       <SectionTitle>Tendințele cercetării științifice pe termen lung</SectionTitle>
       <Paragraph>
         <ParagraphIndent />
@@ -69,10 +67,6 @@ export default function TendinteleCercetarii({ id }) {
         Inovația este aceea care transformă progresul tehnic, generat de activitatea de cercetare științifică, în
         progres economic.
       </Paragraph>
-    </ContentSection>
+    </>
   );
 }
-
-TendinteleCercetarii.propTypes = {
-  id: PropTypes.string.isRequired,
-};

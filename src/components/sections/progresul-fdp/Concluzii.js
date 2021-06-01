@@ -1,6 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import ContentSection from '../../content';
 import {
   Divider,
   Paragraph,
@@ -12,9 +10,9 @@ import {
   SectionTitle,
 } from '../../content/ContentElements';
 
-export default function Concluzii({ id }) {
+export default function Concluzii() {
   return (
-    <ContentSection id={id}>
+    <>
       <SectionTitle>Concluzii</SectionTitle>
       <Paragraph>
         <ParagraphIndent />
@@ -88,10 +86,6 @@ export default function Concluzii({ id }) {
         proprii activității economice.
       </Paragraph>
       <Divider />
-    </ContentSection>
+    </>
   );
 }
-
-Concluzii.propTypes = {
-  id: PropTypes.string.isRequired,
-};

@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import {
   SectionTitle,
   Paragraph,
@@ -11,12 +10,11 @@ import {
   Divider,
 } from '../../content/ContentElements';
 import AspecteCantitativeCalitativeGr from '../../../images/aspecte_cantitative_si_calitative_fdp.png';
-import ContentSection from '../../content';
 import Graphic from '../../graphic';
 
-export default function Aspecte({ id }) {
+export default function Aspecte() {
   return (
-    <ContentSection id={id}>
+    <>
       <SectionTitle>Aspectul calitativ si cantitativ al factorilor de producție</SectionTitle>
       <Paragraph>
         <ParagraphIndent />
@@ -100,10 +98,6 @@ export default function Aspecte({ id }) {
         width='450'>
         <Divider />
       </Graphic>
-    </ContentSection>
+    </>
   );
 }
-
-Aspecte.propTypes = {
-  id: PropTypes.string.isRequired,
-};

@@ -28,11 +28,7 @@ const SectionsConfig = [
       { title: 'Introducere', to: 'introducere' },
       { title: 'Argument', to: 'argument' },
     ],
-    contents: [
-      <Detalii key={0} id={'detalii'} />,
-      <Introducere key={1} id={'introducere'} />,
-      <Argument key={2} id={'argument'} />,
-    ],
+    contents: [<Detalii key={0} />, <Introducere key={1} />, <Argument key={2} />],
   },
   {
     title: 'Principalele categorii de factori de producție',
@@ -41,11 +37,7 @@ const SectionsConfig = [
       { title: 'Natura', to: 'natura' },
       { title: 'Capitalul', to: 'capitalul' },
     ],
-    contents: [
-      <Munca key={0} id={'munca'} />,
-      <Natura key={1} id={'natura'} />,
-      <Capitalul key={2} id={'capitalul'} />,
-    ],
+    contents: [<Munca key={0} />, <Natura key={1} />, <Capitalul key={2} />],
   },
   {
     title: 'Capitalul tehnic și progresul factorilor de producție',
@@ -54,11 +46,7 @@ const SectionsConfig = [
       { title: 'Aspecte', to: 'aspecte' },
       { title: 'Dezvoltarea economică', to: 'dezvoltarea-economica' },
     ],
-    contents: [
-      <TipuriDeCapital key={0} id={'tipuri-de-capital'} />,
-      <Aspecte key={1} id={'aspecte'} />,
-      <DezvoltareaEconomica key={2} id={'dezvoltarea-economica'} />,
-    ],
+    contents: [<TipuriDeCapital key={0} />, <Aspecte key={1} />, <DezvoltareaEconomica key={2} />],
   },
   {
     title: 'Progresul tehnic și progresul economic',
@@ -66,10 +54,7 @@ const SectionsConfig = [
       { title: 'Reglarea economică', to: 'reglarea-economica' },
       { title: 'Inovare și inovație', to: 'inovare-inovație' },
     ],
-    contents: [
-      <ReglareaEconomica key={0} id={'reglarea-economica'} />,
-      <InovareInovatie key={1} id={'inovare-inovație'} />,
-    ],
+    contents: [<ReglareaEconomica key={0} />, <InovareInovatie key={1} />],
   },
   {
     title: 'Progresul tehnic și societatea',
@@ -77,15 +62,12 @@ const SectionsConfig = [
       { title: 'Tendințele cercetării științifice pe termen lung', to: 'tendintele-cercetarii' },
       { title: 'Rezistența socială la progresul tehnic', to: 'rezistenta-sociala' },
     ],
-    contents: [
-      <TendinteleCercetarii key={0} id={'tendintele-cercetarii'} />,
-      <RezistentaSociala key={1} id={'rezistenta-sociala'} />,
-    ],
+    contents: [<TendinteleCercetarii key={0} />, <RezistentaSociala key={1} />],
   },
   {
     title: 'Progresul factorilor de producție',
     items: [{ title: 'Concluzii', to: 'concluzii' }],
-    contents: [<Concluzii key={0} id={'concluzii'} />],
+    contents: [<Concluzii key={0} />],
   },
   {
     title: 'Aplicații',
@@ -93,7 +75,7 @@ const SectionsConfig = [
       { title: 'Test', to: 'test' },
       { title: 'Rebus', to: 'rebus' },
     ],
-    contents: [<Test key={0} id={'test'} />, <Rebus key={1} id={'rebus'} />],
+    contents: [<Test key={0} />, <Rebus key={1} />],
   },
 ];
 

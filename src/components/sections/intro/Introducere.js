@@ -1,6 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import ContentSection from '../../content';
 import {
   Divider,
   Paragraph,
@@ -11,9 +9,9 @@ import {
 } from '../../content/ContentElements';
 import { Quote } from './Elements';
 
-export default function Introducere({ id }) {
+export default function Introducere() {
   return (
-    <ContentSection id={id}>
+    <>
       <SectionTitle>Introducere</SectionTitle>
       <Quote>
         <ParagraphIndent />
@@ -63,10 +61,6 @@ export default function Introducere({ id }) {
         <sup>1</sup>(Paul Heyne - ”Modelul economic de gândire. Mersul economiei de piață”, E.D.P., Bucuresti, 1990)
       </Paragraph>
       <Divider />
-    </ContentSection>
+    </>
   );
 }
-
-Introducere.propTypes = {
-  id: PropTypes.string.isRequired,
-};

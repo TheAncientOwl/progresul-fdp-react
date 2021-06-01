@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import ContentSection from '../../../content';
 import Words from './Words';
 import { Container, CrosswordsBody, CrosswordsWrapper, Hint, HintsContainer, HintWord } from './RebusElements';
 import Crossword from './Crossword';
 import { Button } from '../test/TestElements';
 import { Divider, SectionTitle } from '../../../content/ContentElements';
 
-export default function Rebus({ id }) {
+export default function Rebus() {
   const [answers, setAnswers] = useState(new Array(Words.length));
   const [submitted, setSubmitted] = useState(false);
 
@@ -49,7 +47,7 @@ export default function Rebus({ id }) {
   };
 
   return (
-    <ContentSection id={id}>
+    <>
       <SectionTitle>Rebus</SectionTitle>
       <Container>
         <CrosswordsWrapper>
@@ -64,10 +62,6 @@ export default function Rebus({ id }) {
           <Divider />
         </>
       )}
-    </ContentSection>
+    </>
   );
 }
-
-Rebus.propTypes = {
-  id: PropTypes.string.isRequired,
-};

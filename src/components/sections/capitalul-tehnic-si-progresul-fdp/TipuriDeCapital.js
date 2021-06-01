@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import {
   SectionTitle,
   Paragraph,
@@ -10,14 +9,13 @@ import {
   ParagraphIndent,
   Divider,
 } from '../../content/ContentElements';
-import ContentSection from '../../content';
 import ComponenteleCapitaluluiGr from '../../../images/componentele_capitalului.png';
 import StareaCapitaluluiFixGr from '../../../images/starea_capitalului_fix.png';
 import Graphic from '../../graphic';
 
-export default function TipuriDeCapital({ id }) {
+export default function TipuriDeCapital() {
   return (
-    <ContentSection id={id}>
+    <>
       <SectionTitle>Tipuri de capital</SectionTitle>
       <Paragraph>
         <ParagraphIndent />
@@ -87,10 +85,6 @@ export default function TipuriDeCapital({ id }) {
       <Graphic title='Starea capitalului fix' src={StareaCapitaluluiFixGr} alt='starea capitalului fix' width='700'>
         <Divider />
       </Graphic>
-    </ContentSection>
+    </>
   );
 }
-
-TipuriDeCapital.propTypes = {
-  id: PropTypes.string.isRequired,
-};

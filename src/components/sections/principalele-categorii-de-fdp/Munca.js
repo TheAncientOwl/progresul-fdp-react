@@ -1,6 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import ContentSection from '../../content';
 import {
   Divider,
   Paragraph,
@@ -11,9 +9,9 @@ import {
   SectionTitle,
 } from '../../content/ContentElements';
 
-export default function Munca({ id }) {
+export default function Munca() {
   return (
-    <ContentSection id={id}>
+    <>
       <SectionTitle>Munca - factor activ și determinant al producției</SectionTitle>
       <Paragraph>
         <ParagraphIndent />
@@ -67,10 +65,6 @@ export default function Munca({ id }) {
         afara muncii.
       </Paragraph>
       <Divider />
-    </ContentSection>
+    </>
   );
 }
-
-Munca.propTypes = {
-  id: PropTypes.string.isRequired,
-};

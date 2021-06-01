@@ -1,6 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import ContentSection from '../../content';
 import {
   Divider,
   Paragraph,
@@ -11,9 +9,9 @@ import {
   SectionTitle,
 } from '../../content/ContentElements';
 
-export default function Natura({ id }) {
+export default function Natura() {
   return (
-    <ContentSection id={id}>
+    <>
       <SectionTitle>Natura - factor de producție</SectionTitle>
       <SectionSubTitle>Munca împreună cu natura sunt factori de producție originari.</SectionSubTitle>
       <Paragraph>
@@ -59,10 +57,6 @@ export default function Natura({ id }) {
         În asemenea situație, pământul se prezintă ca un factor de producție regenerabil.
       </Paragraph>
       <Divider />
-    </ContentSection>
+    </>
   );
 }
-
-Natura.propTypes = {
-  id: PropTypes.string.isRequired,
-};

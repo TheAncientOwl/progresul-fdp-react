@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import ContentSection from '../../../content';
 import { Divider, SectionTitle } from '../../../content/ContentElements';
 import MultipleChoice from './MultipleChoice';
 import MultipleChoiceQuestions from './MultipleChoiceQuestions';
 import { Button, Score } from './TestElements';
 
-export default function Test({ id }) {
+export default function Test() {
   const [answers, setAnswers] = useState(new Array(MultipleChoiceQuestions.length));
   const [submitted, setSubmitted] = useState(false);
 
@@ -48,7 +46,7 @@ export default function Test({ id }) {
   };
 
   return (
-    <ContentSection id={id}>
+    <>
       <SectionTitle>Test</SectionTitle>
       {MultipleChoiceQuestions.map((item, index) => (
         <React.Fragment key={index}>
@@ -62,10 +60,6 @@ export default function Test({ id }) {
         </React.Fragment>
       ))}
       {postSolveButton()}
-    </ContentSection>
+    </>
   );
 }
-
-Test.propTypes = {
-  id: PropTypes.string.isRequired,
-};

@@ -1,6 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import ContentSection from '../../content';
 import {
   Divider,
   Paragraph,
@@ -11,9 +9,9 @@ import {
   SectionTitle,
 } from '../../content/ContentElements';
 
-export default function ReglareaEconomica({ id }) {
+export default function ReglareaEconomica() {
   return (
-    <ContentSection id={id}>
+    <>
       <SectionTitle>Reglarea economică a progresului tehnic</SectionTitle>
       <Paragraph>
         <ParagraphIndent />
@@ -57,10 +55,6 @@ export default function ReglareaEconomica({ id }) {
         inițiative în promovarea progresului tehnic.
       </Paragraph>
       <Divider />
-    </ContentSection>
+    </>
   );
 }
-
-ReglareaEconomica.propTypes = {
-  id: PropTypes.string.isRequired,
-};

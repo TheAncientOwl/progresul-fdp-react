@@ -1,6 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import ContentSection from '../../content';
 import {
   Divider,
   Paragraph,
@@ -11,9 +9,9 @@ import {
   SectionTitle,
 } from '../../content/ContentElements';
 
-export default function InovareInovatie({ id }) {
+export default function InovareInovatie() {
   return (
-    <ContentSection id={id}>
+    <>
       <SectionTitle>Inovare și inovație</SectionTitle>
       <SectionSubTitle>Inovarea</SectionSubTitle>
       <Paragraph>
@@ -54,10 +52,6 @@ export default function InovareInovatie({ id }) {
         </SectionList>
       </Paragraph>
       <Divider />
-    </ContentSection>
+    </>
   );
 }
-
-InovareInovatie.propTypes = {
-  id: PropTypes.string.isRequired,
-};

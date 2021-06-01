@@ -1,6 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import ContentSection from '../../content';
 import {
   Divider,
   Paragraph,
@@ -11,9 +9,9 @@ import {
   SectionTitle,
 } from '../../content/ContentElements';
 
-export default function Capitalul({ id }) {
+export default function Capitalul() {
   return (
-    <ContentSection id={id}>
+    <>
       <SectionTitle>Capitalul</SectionTitle>
       <Paragraph>
         <ParagraphIndent />
@@ -42,10 +40,6 @@ export default function Capitalul({ id }) {
         </SectionList>
       </Paragraph>
       <Divider />
-    </ContentSection>
+    </>
   );
 }
-
-Capitalul.propTypes = {
-  id: PropTypes.string.isRequired,
-};

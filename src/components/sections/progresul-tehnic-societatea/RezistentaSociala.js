@@ -1,6 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import ContentSection from '../../content';
 import {
   Divider,
   Paragraph,
@@ -10,9 +8,9 @@ import {
   SectionTitle,
 } from '../../content/ContentElements';
 
-export default function RezistentaSociala({ id }) {
+export default function RezistentaSociala() {
   return (
-    <ContentSection id={id}>
+    <>
       <SectionTitle>Rezistența socială la progresul tehnic</SectionTitle>
       <Paragraph>
         <ParagraphIndent />
@@ -58,10 +56,6 @@ export default function RezistentaSociala({ id }) {
         </SectionList>
       </Paragraph>
       <Divider />
-    </ContentSection>
+    </>
   );
 }
-
-RezistentaSociala.propTypes = {
-  id: PropTypes.string.isRequired,
-};

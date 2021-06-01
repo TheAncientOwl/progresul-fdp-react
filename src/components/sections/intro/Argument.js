@@ -1,6 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import ContentSection from '../../content';
 import {
   Divider,
   Paragraph,
@@ -10,9 +8,9 @@ import {
   SectionTitle,
 } from '../../content/ContentElements';
 
-export default function Argument({ id }) {
+export default function Argument() {
   return (
-    <ContentSection id={id}>
+    <>
       <SectionTitle>Argument</SectionTitle>
       <Paragraph>
         <ParagraphIndent />
@@ -44,10 +42,6 @@ export default function Argument({ id }) {
         ))}
       </Paragraph>
       <Divider />
-    </ContentSection>
+    </>
   );
 }
-
-Argument.propTypes = {
-  id: PropTypes.string.isRequired,
-};

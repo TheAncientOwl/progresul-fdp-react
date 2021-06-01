@@ -1,11 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import ContentSection from '../../content';
 import { Text, Title, Year, Subtitle, Left, Right, Info } from './Elements';
 
-export default function Detalii({ id }) {
+export default function Detalii() {
   return (
-    <ContentSection id={id}>
+    <>
       <Title>
         {['Concursul Național', '"Istorie și Societate în Dimensiune Virtuală"'].map((item, index) => (
           <Text key={index}>{item}</Text>
@@ -40,10 +38,6 @@ export default function Detalii({ id }) {
           ))}
         </Right>
       </Info>
-    </ContentSection>
+    </>
   );
 }
-
-Detalii.propTypes = {
-  id: PropTypes.string.isRequired,
-};
