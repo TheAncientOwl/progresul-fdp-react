@@ -51,15 +51,16 @@ export default function Test({ id }) {
     <ContentSection id={id}>
       <SectionTitle>Test</SectionTitle>
       {MultipleChoiceQuestions.map((item, index) => (
-        <MultipleChoice
-          key={index}
-          choiceIndex={index}
-          onAnswerChange={answer => setAnswer(answer, index)}
-          submitted={submitted}
-          selectedIndex={answers[index]}
-        />
+        <React.Fragment key={index}>
+          <MultipleChoice
+            choiceIndex={index}
+            onAnswerChange={answer => setAnswer(answer, index)}
+            submitted={submitted}
+            selectedIndex={answers[index]}
+          />
+          <Divider />
+        </React.Fragment>
       ))}
-      <Divider />
       {postSolveButton()}
     </ContentSection>
   );

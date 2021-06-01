@@ -5,15 +5,23 @@ export const QuestionContainer = styled.div`
   padding: 5px 20px;
   margin-top: 10px;
   font-size: 1.15rem;
+
+  @media (max-width: ${Breakpoints.phone}) {
+    font-size: 1rem;
+  }
 `;
 
 export const Question = styled.div`
-  color: ${props => props.theme.text.secondary};
+  color: ${props => props.theme.text.primary};
 `;
 
 export const AnswersList = styled.div`
   margin-top: 8px;
   margin-left: 25px;
+
+  @media (max-width: ${Breakpoints.phone}) {
+    margin-left: 0px;
+  }
 `;
 
 export const AnswerBox = styled.div`
@@ -23,6 +31,10 @@ export const AnswerBox = styled.div`
   position: relative;
   box-sizing: border-box;
   margin-top: 10px;
+
+  @media (max-width: ${Breakpoints.phone}) {
+    height: 65px;
+  }
 `;
 
 export const RadioButtonLabel = styled.label`
@@ -46,6 +58,10 @@ export const RadioButton = styled.input`
   &:hover ~ ${RadioButtonLabel}, &:checked + ${RadioButtonLabel} {
     background: ${props => props.theme.secondary};
     border: 2px solid ${props => props.theme.primary};
+  }
+
+  @media (max-width: ${Breakpoints.phone}) {
+    margin-right: 1.2rem;
   }
 `;
 
