@@ -18,6 +18,7 @@ import Test from './aplicatii/test';
 import Detalii from './intro/Detalii';
 import Introducere from './intro/Introducere';
 import Argument from './intro/Argument';
+import Rebus from './aplicatii/rebus';
 
 const SectionsConfig = [
   {
@@ -88,8 +89,11 @@ const SectionsConfig = [
   },
   {
     title: 'Aplicații',
-    items: [{ title: 'Test', to: 'test' }],
-    contents: [<Test key={0} id={'test'} />],
+    items: [
+      { title: 'Test', to: 'test' },
+      { title: 'Rebus', to: 'rebus' },
+    ],
+    contents: [<Test key={0} id={'test'} />, <Rebus key={1} id={'rebus'} />],
   },
 ];
 
