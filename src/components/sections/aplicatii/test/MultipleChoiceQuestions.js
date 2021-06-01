@@ -17,7 +17,7 @@ const MultipleChoiceQuestions = [
       'mijloacele de transport',
       'clădirile administrative ale firmei',
       'energia consumată în procesul de producție',
-      'depozitele pentru prdusele finite',
+      'depozitele pentru produsele finite',
     ],
     correctIndex: 2,
     name: 'q3',
@@ -25,7 +25,7 @@ const MultipleChoiceQuestions = [
   {
     question: '4) Utilizarea factorilor de producție pe principii ecologice:',
     answers: [
-      'este o procupare numai a țărilor dezvoltate',
+      'este o preocupare numai a țărilor dezvoltate',
       'este o preocupare numai a țărilor subdezvoltate',
       'este un aspect cantitativ al progresului factorilor de producție',
       'este un aspect calitativ al progresului factorilor de prducție',
