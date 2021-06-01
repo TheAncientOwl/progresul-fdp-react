@@ -90,10 +90,10 @@ const SectionsConfig = [
   {
     title: 'Aplicații',
     items: [
-      { title: 'Test', to: 'test' },
       { title: 'Rebus', to: 'rebus' },
+      { title: 'Test', to: 'test' },
     ],
-    contents: [<Test key={0} id={'test'} />, <Rebus key={1} id={'rebus'} />],
+    contents: [<Rebus key={1} id={'rebus'} />, <Test key={0} id={'test'} />],
   },
 ];
 
