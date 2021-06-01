@@ -1,9 +1,15 @@
 import styled, { css } from 'styled-components';
+import Breakpoints from '../../../../Breakpoints';
 
 export const Container = styled.div`
   display: flex;
   gap: 25px;
   margin-top: 30px;
+  padding: 5px;
+
+  @media (max-width: ${Breakpoints.tablet}) {
+    display: block;
+  }
 `;
 
 export const CrosswordsWrapper = styled.table`
@@ -72,6 +78,10 @@ export const LetterInput = styled.input(
 export const HintsContainer = styled.div`
   width: 100%;
   margin: 20px auto;
+
+  @media (max-width: ${Breakpoints.tablet}) {
+    margin-top: 30px;
+  }
 `;
 
 export const Hint = styled.div`
@@ -81,6 +91,7 @@ export const Hint = styled.div`
 
 export const HintWord = styled.div(
   ({ submitted, right, theme }) => css`
+    margin-left: 30px;
     padding-top: 5px;
     font-size: small;
     display: none;

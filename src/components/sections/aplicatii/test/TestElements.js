@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import Breakpoints from '../../../../Breakpoints';
 
 export const QuestionContainer = styled.div`
   padding: 5px 20px;
@@ -80,6 +81,10 @@ export const Button = styled.div(
 
     &:hover {
       color: ${theme.primary};
+    }
+
+    @media (max-width: ${Breakpoints.phone}) {
+      width: 80%;
     }
   `
 );
