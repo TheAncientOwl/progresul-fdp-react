@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/progresul-fdp-react/static/css/main.664047bd.chunk.css",
+    "main.js": "/progresul-fdp-react/static/js/main.def5c0db.chunk.js",
+    "main.js.map": "/progresul-fdp-react/static/js/main.def5c0db.chunk.js.map",
+    "runtime-main.js": "/progresul-fdp-react/static/js/runtime-main.09bd6418.js",
+    "runtime-main.js.map": "/progresul-fdp-react/static/js/runtime-main.09bd6418.js.map",
+    "static/js/2.54e6c44d.chunk.js": "/progresul-fdp-react/static/js/2.54e6c44d.chunk.js",
+    "static/js/2.54e6c44d.chunk.js.map": "/progresul-fdp-react/static/js/2.54e6c44d.chunk.js.map",
+    "index.html": "/progresul-fdp-react/index.html",
+    "static/css/main.664047bd.chunk.css.map": "/progresul-fdp-react/static/css/main.664047bd.chunk.css.map",
+    "static/js/2.54e6c44d.chunk.js.LICENSE.txt": "/progresul-fdp-react/static/js/2.54e6c44d.chunk.js.LICENSE.txt",
+    "static/media/aspecte_cantitative_si_calitative_fdp.1794fedc.png": "/progresul-fdp-react/static/media/aspecte_cantitative_si_calitative_fdp.1794fedc.png",
+    "static/media/componentele_capitalului.780243e9.png": "/progresul-fdp-react/static/media/componentele_capitalului.780243e9.png",
+    "static/media/starea_capitalului_fix.541018bb.png": "/progresul-fdp-react/static/media/starea_capitalului_fix.541018bb.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.09bd6418.js",
+    "static/js/2.54e6c44d.chunk.js",
+    "static/css/main.664047bd.chunk.css",
+    "static/js/main.def5c0db.chunk.js"
+  ]
+}
