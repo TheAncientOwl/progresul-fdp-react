@@ -11,6 +11,7 @@ export const GraphicContainer = styled.div`
 `;
 
 export const GraphicTitle = styled.div`
+  color: ${props => props.theme.secondary};
   background-image: ${props => `linear-gradient(to top, ${props.theme.secondary} 0%, ${props.theme.primary} 100%)`};
   background-size: 100%;
   background-clip: text;

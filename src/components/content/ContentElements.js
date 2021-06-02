@@ -31,6 +31,7 @@ export const SectionTitle = styled.div`
   max-width: 800px;
   text-align: center;
 
+  color: ${props => props.theme.secondary};
   background-image: ${props => `linear-gradient(to top, ${props.theme.secondary} 0%, ${props.theme.primary} 100%)`};
   background-size: 100%;
   background-clip: text;
