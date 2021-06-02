@@ -54,7 +54,7 @@ export const NavContainer = styled.div`
 `;
 
 export const NavTitle = styled.div`
-  color: ${props => props.theme.secondary};
+  color: transparent;
   background-image: ${props => `linear-gradient(to top, ${props.theme.secondary} 0%, ${props.theme.primary} 100%)`};
   background-size: 100%;
   background-clip: text;
