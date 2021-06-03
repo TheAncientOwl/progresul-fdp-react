@@ -11,14 +11,7 @@ export const GraphicContainer = styled.div`
 `;
 
 export const GraphicTitle = styled.div`
-  color: transparent;
-  background-image: ${props => `linear-gradient(to top, ${props.theme.secondary} 0%, ${props.theme.primary} 100%)`};
-  background-size: 100%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
+  color: ${props => props.theme.primary};
 
   margin: 15px auto;
   font-size: 1.2rem;

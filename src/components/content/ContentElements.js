@@ -31,14 +31,7 @@ export const SectionTitle = styled.div`
   max-width: 800px;
   text-align: center;
 
-  color: transparent;
-  background-image: ${props => `linear-gradient(to top, ${props.theme.secondary} 0%, ${props.theme.primary} 100%)`};
-  background-size: 100%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
+  color: ${props => props.theme.primary};
 
   @media (max-width: ${Breakpoints.tablet}) {
     display: block;
